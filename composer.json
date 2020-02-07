@@ -1,0 +1,22 @@
+{
+    "name": "n/a",
+    "description": "A project template for doing Drupal core and contrib work together.",
+    "license": "proprietary",
+    "require": {},
+    "config": {
+        "preferred-install": {
+            "drupal/drupal": "source"
+        }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "minimum-stability": "dev"
+}

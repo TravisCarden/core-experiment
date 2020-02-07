@@ -1,0 +1,4 @@
+test/
+vendor/
+web/
+composer.lock
