@@ -2,10 +2,27 @@
     "name": "n/a",
     "description": "A project template for doing Drupal core and contrib work together.",
     "license": "proprietary",
-    "require": {},
+    "require": {
+        "composer/installers": "^1.0@dev",
+        "drupal/core": "*@dev",
+        "drupal/drupal": "*@dev"
+    },
     "config": {
         "preferred-install": {
             "drupal/drupal": "source"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "web": ["drupal/drupal"],
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         }
     },
     "repositories": {
