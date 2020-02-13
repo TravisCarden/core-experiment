@@ -4,8 +4,9 @@
     "license": "proprietary",
     "require": {
         "composer/installers": "^1.0@dev",
+        "cweagans/composer-patches": "^1.6.7",
         "drupal/core": "*@dev",
-        "drupal/drupal": "*@dev"
+        "drupal/drupal": "8.8.2"
     },
     "config": {
         "preferred-install": {
@@ -13,6 +14,7 @@
         }
     },
     "extra": {
+        "enable-patching": true,
         "installer-paths": {
             "web": ["drupal/drupal"],
             "web/core": ["type:drupal-core"],
@@ -26,9 +28,13 @@
         }
     },
     "repositories": {
-        "drupal": {
+        "packages.drupal.org": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "git.drupal.org": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/drupal.git"
         },
         "asset-packagist": {
             "type": "composer",
